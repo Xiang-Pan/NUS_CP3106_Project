@@ -1,0 +1,38 @@
+\contentsline {chapter}{Title}{i}{Doc-Start}%
+\contentsline {chapter}{Abstract}{ii}{Doc-Start}%
+\contentsline {chapter}{Acknowledgement}{iii}{Doc-Start}%
+\contentsline {chapter}{List of Figures}{iv}{Doc-Start}%
+\contentsline {chapter}{List of Tables}{v}{chapter*.1}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Background}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}The Problem}{1}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Our Solution}{2}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Report Organization}{2}{section.1.4}%
+\contentsline {chapter}{\numberline {2}Related Work}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Sentiment Analysis}{3}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Aspect Based Sentiment Analysis}{3}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Pre-trained models}{3}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Problem and Algorithm}{4}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Formal Description of Problem}{4}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Design of Algorithm}{4}{section.3.2}%
+\contentsline {section}{\numberline {3.3}A general framework for Targeted Sentiment Analysis(TSA)}{4}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Auxiliary training methods for TSA}{4}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Adversarial training methods for Robustness of TSA}{4}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Evaluation}{5}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Implementation Details}{5}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Experimental Setup}{5}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Targeted Sentiment Analysis}{5}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Domain Adaption' effect on Targeted Sentiment Analysis}{5}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Robustness of Targeted Sentiment Analysis Algorithms}{5}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3}Visualization}{5}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Pre-trained BERT Visualization}{5}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Fine-tuned BERT Visualization}{5}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Conclusion from Visualization}{5}{subsection.4.3.3}%
+\contentsline {section}{\numberline {4.4}Results}{5}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Conclusion}{7}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Contributions}{7}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Future Work}{7}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Domain adaptation for BERT(Post-training BERT)}{7}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Self-Supervised BERT training methods}{7}{subsection.5.2.2}%
+\contentsline {chapter}{\numberline {A}Code}{A-1}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Proofs}{B-1}{appendix.B}%

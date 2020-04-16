@@ -1,0 +1,232 @@
+\documentclass[fyp]{socreport}
+
+% \input{setup/package.tex}
+% \input{setup/define.tex}
+\usepackage{threeparttable}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{multirow}
+
+\usepackage[colorlinks,linkcolor=black]{hyperref}
+
+
+\usepackage{fullpage}
+\begin{document}
+\pagenumbering{roman}
+\title{A BERT-Based Framework for Targeted Sentiment Analysis}
+\author{Xiang Pan}
+\projyear{2020/04}
+\projnumber{CP3106}
+
+
+\advisor{Prof. Lee Wee Sun}
+\deliverables{
+	\item Report: 1 Volume
+	\item Source Code: 1 DVD}
+\maketitle
+\begin{abstract}
+Sentiment Analysis 
+In the report, we distinguish the differences between the general sentiment analysis and Targeted Sentiment Analysis. Future more, we analyze the existing problems of Targeted Sentiment Analysis. To address these problems, we proposed a new BERT-based framework to solve the targeted sentiment analysis problem. Based on the framework, we introduce some auxiliary training methods to improve the accuracy of the results. To illustrate the existing methods' robustness problem toward new unseen targets, we introduce a new data set setting, which explicitly make the targets in the training set and test set to be different. Then, we use the adversarial training methods to enhance the robustness of our framework training. Overall, our framework behave better than the state of the art in the traditional targeted sentiment analysis setting and showed robustness in the new re-split data set setting.Finally, we describe the future work in targeted sentiment analysis.
+
+
+\begin{descriptors}
+    \item C5 Computer System Implementation
+	\item G2.2 Graph Algorithms
+\end{descriptors}
+\begin{keywords}
+	Targeted Sentiment Analysis, robustness, BERT, adversarial training, auxiliary training
+\end{keywords}
+\begin{implement}
+	Python, Pytorch, RTX 2080TI
+\end{implement}
+\end{abstract}
+
+\begin{acknowledgement}
+   I would like to thank my friends, families, members of the laboratory and advisors.
+   Without them, I would not have be able to complete this project.
+%    In addtion, thanks to the NGNE program for giving me a opportunity to do research.
+\end{acknowledgement}
+
+\listoffigures 
+\listoftables
+\tableofcontents 
+
+\chapter{Introduction}
+The sentiment analysis is a specific task under the text classification. F
+
+
+
+
+Many problems exist in computer science.  In this project, we 
+studied one particular important problem and propose a solution 
+for it.  
+
+\section{Background}
+In this section, we briefly discuss the history and background
+of the targeted sentiment analysis problem.  A detail literature survey is presented in 
+Chapter \ref{ch:related}.
+
+The sentiment analysis was proposed
+The problem we study in this report is an important one.
+This problem is first proposed in 1990 in the context
+of graph theory \cite{smith90graph}.  Zhang gives the
+first algorithm to the problem and applied it to solve several 
+problems in artificial intelligence \cite{zhang91ai,zhang92ai}.  
+More recently, a slightly different formulation of the problem
+is studied independently \cite{kovsky92diff,ali94diff}.  None of this previous work
+uses the technique that we propose in this project.  Thus, we 
+believe that our algorithm is novel.
+
+\section{The Problem}
+In this section, we formally defined the problem.  We adopt
+the definition given by Kovsky \cite{kovsky92diff}.
+
+\section{Our Solution}
+\section{Report Organization}
+
+\chapter{Related Work}
+\label{ch:related}
+
+% \section{}
+\section{Sentiment Analysis}
+
+
+
+\section{Aspect Based Sentiment Analysis}
+
+\section{Pre-trained models}
+
+
+
+
+
+
+
+\chapter{Problem and Algorithm}
+\section{Formal Description of Problem}
+Given a text sequence with n words text=$\{w_1,w_2,w_3,w_4,...,w_n\}$ and a target with m words, target text=  $\{t_1,t_2,t_m\}$ with its begin position $b$, the problem is to classify the sentiment towards the given target in the context.
+
+
+\section{Design of Algorithm}
+\section{A general framework for Targeted Sentiment Analysis(TSA)}
+
+
+
+\section{Auxiliary training methods for TSA}
+
+
+\section{Adversarial training methods for Robustness of TSA}
+
+
+
+
+% \section{Proof of Correctness}
+% \section{Complexity Analysis}
+
+\chapter{Evaluation}
+
+
+\section{Implementation Details}
+Our experiment is based on the code of \href{https://github.com/songyouwei/ABSA-PyTorch}{ABSA-Pytorch}. 
+We release our code in \href{https://github.com/Xiang-Pan/ABSA-PyTorch}{TSA-Pytorch}.
+\section{Experimental Setup}
+
+\subsection{Targeted Sentiment Analysis}
+
+\subsection{Domain Adaption' effect on Targeted Sentiment Analysis}
+
+
+\subsection{Robustness of Targeted Sentiment Analysis Algorithms}
+
+
+
+
+
+
+
+
+
+
+
+\section{Visualization}
+\subsection{Pre-trained BERT Visualization}
+
+
+\subsection{Fine-tuned BERT Visualization}
+
+
+\subsection{Conclusion from Visualization}
+
+
+
+
+\section{Results}
+
+
+\begin{table*}[tp]
+    \small
+    \centering
+    \resizebox{\textwidth}{!}{
+    \begin{threeparttable}
+    \caption{
+		Test results on three typical data sets.
+		% The baselines results are from the existed paper's reports. \\
+		% '-' means do not include included in the original paper or the test can not be done in this data set. 
+		% The highest score is marked with \textbf{bold}.
+	}
+      \begin{tabular}{cccccccc}
+      \toprule
+      \multirow{2}{*}{ }&\multirow{2}{*}{\textbf{Models}}&
+      \multicolumn{2}{c}{\textbf{Twitter}}&\multicolumn{2}{c}{\textbf{Restaurant}}&\multicolumn{2}{c}{\textbf{Laptop}}\cr
+      \cmidrule(lr){3-4} \cmidrule(lr){5-6} \cmidrule(lr){7-8}
+      &&Accuracy&Macro-F1&Accuracy&Macro-F1&Accuracy&Macro-F1\cr
+      \midrule
+          \multirow{4}*{\textbf{RNN baselines}}
+          &TD-LSTM           &0.7080&0.6900              &0.7563&-                  &0.6813&-         \cr
+          &ATAE-LSTM         &-&-                        &0.7720&-                  &0.6870&-         \cr
+          &IAN               &-&-                        &0.7860&-                  &0.7210&-         \cr
+          &RAM               &0.6936&0.6730              &0.8023&0.7080             &\textbf{0.7449}&\textbf{0.7135}     \cr
+      \midrule
+          \multirow{3}*{\textbf{Non-RNN baselines}}
+          &Feature-based SVM &0.6340&0.6330              &0.8016&-                  &0.7049&-           \cr
+          &Rec-NN            &0.6630&0.6590              &-&-                       &-&-              \cr
+          &MemNet            &0.6850&0.6691              &0.7816&0.6583             &0.7033&0.6409    \cr
+      \midrule
+          \multirow{4}*{\textbf{AEN-GloVe ablations}}
+          &AEN-GloVe w/o PCT       &0.7066&0.6907              &0.8017&0.7050             &0.7272&0.6750 \cr
+          &AEN-GloVe w/o MHA       &0.7124&0.6953              &0.7919&0.7028             &0.7178&0.6650 \cr
+          &AEN-GloVe w/o LSR       &0.7080&0.6920              &0.8000&0.7108             &0.7288&0.6869 \cr
+          &AEN-GloVe-BiLSTM        &0.7210&\textbf{0.7042}     &0.7973&0.7037             &0.7312&0.6980 \cr
+      \midrule
+          \multirow{3}*{\textbf{Ours}}
+          &AEN-GloVe  &\textbf{0.7283}&0.6981  &\textbf{0.8098}&\textbf{0.7214}  &0.7351&0.6904 \cr
+          &BERT-SPC  &\textbf{0.7355}&\textbf{0.7214} &\textbf{0.8446}&\textbf{0.7698} &\textbf{0.7899}&\textbf{0.7503} \cr
+          &AEN-BERT &\textbf{0.7471}&\textbf{0.7313} &\textbf{0.8312}&\textbf{0.7376} &\textbf{0.7993}&\textbf{0.7631} \cr
+      \bottomrule
+      \end{tabular}fr
+      \label{tab:result}
+      \end{threeparttable}}
+  \end{table*}
+
+
+
+\chapter{Conclusion}
+In our work,
+\section{Contributions}
+\section{Future Work}
+\subsection{Domain adaptation for BERT(Post-training BERT)}
+The post-training bert can achieve better in the specific domain's sentiment analysis. In p
+
+\subsection{Self-Supervised BERT training methods}
+
+\bibliographystyle{socreport}
+\bibliography{socreport}
+
+\appendix
+\chapter{Code}
+
+\chapter{Proofs}
+In this appendix, we present alternate, longer, but more interesting proof 
+of correctness of our algorithm.  This proof is based on induction and proof
+by contradiction.
+\end{document}
