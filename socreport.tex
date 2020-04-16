@@ -6,6 +6,8 @@
 \usepackage{booktabs}
 \usepackage{graphicx}
 \usepackage{multirow}
+\usepackage{titlesec}
+\usepackage{enumitem}
 
 \usepackage[colorlinks,linkcolor=black]{hyperref}
 
@@ -52,7 +54,7 @@ In the report, we distinguish the differences between the general sentiment anal
 \tableofcontents 
 
 \chapter{Introduction}
-The sentiment analysis is a specific task under the text classification. F
+The sentiment analysis is a specific task under the text classification.
 
 
 
@@ -69,7 +71,7 @@ Chapter \ref{ch:related}.
 The sentiment analysis was proposed
 The problem we study in this report is an important one.
 This problem is first proposed in 1990 in the context
-of graph theory \cite{smith90graph}.  Zhang gives the
+of graph theory \cite{smith90graph}.  Zhang gives thec
 first algorithm to the problem and applied it to solve several 
 problems in artificial intelligence \cite{zhang91ai,zhang92ai}.  
 More recently, a slightly different formulation of the problem
@@ -87,8 +89,8 @@ the definition given by Kovsky \cite{kovsky92diff}.
 \chapter{Related Work}
 \label{ch:related}
 
-% \section{}
-\section{Sentiment Analysis}
+
+\section{Text classification}
 
 
 
@@ -104,11 +106,60 @@ the definition given by Kovsky \cite{kovsky92diff}.
 
 \chapter{Problem and Algorithm}
 \section{Formal Description of Problem}
-Given a text sequence with n words text=$\{w_1,w_2,w_3,w_4,...,w_n\}$ and a target with m words, target text=  $\{t_1,t_2,t_m\}$ with its begin position $b$, the problem is to classify the sentiment towards the given target in the context.
+Given a text sequence with n words text=$\{w_1,w_2,w_3,w_4,...,w_n\}$ and a target with m words, target text=  $\{t_1,t_2,t_m\}$ with its begin position $b$, the problem is to classify the sentiment polarity $polarity=\{positive,neutral,negative\}$ towards the given target in the context. We followed the SemEval 2014 Task 4\cite{pontiki-etal-2014-semeval}
+
+
 
 
 \section{Design of Algorithm}
 \section{A general framework for Targeted Sentiment Analysis(TSA)}
+
+\subsection{BERT for text classification}
+
+
+As a powerful pre-trained universal language model, BERT can be used in various downstream tasks.
+To utilize bert, we have several direct ways:
+\begin{enumerate}
+    \item Using BERT embeddings as the input of sequence
+    \item Fine-tuned BERT by [CLS] classification token.
+\end{enumerate}
+
+To enhance the performance, \cite{sun2019finetune} have several methods for text classification: 
+
+
+\paragraph{Trick for text classification}
+
+\begin{enumerate}
+    \item Various fine tuning methods
+    \begin{enumerate}
+        \item Within-task pre-training
+        \item In-domain pre-training
+        \item Cross-domain pre-training
+    \end{enumerate}
+    
+    \item Different learning rates are used for different layers of Bert
+\end{enumerate}
+
+
+Those methods only consider the sentence-level classification. For TSA, the classification problem is more fine-grained, hence we will introduce our BERT-based framework for TSA.
+
+
+\subsubsection{BERT for TSA}
+
+As described in the related work, BERT-SPC \cite{Song2019} repeat the target words at the end of context sentence. 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\linewidth]{./image/Framework.png}
+    \caption{Our framework for TSA}
+  \label{Framework}
+\end{figure}
+
+For original bert, the most direct way to utilize bert
+
+As show in the image \ref{Framework}, we add the begin token and end token around the target. In our initial experiments, we add the same token for different targets in the context sentence. However, 
+
+
 
 
 
@@ -208,7 +259,7 @@ We release our code in \href{https://github.com/Xiang-Pan/ABSA-PyTorch}{TSA-Pyto
       \end{threeparttable}}
   \end{table*}
 
-
+%  asdfsdaf \cite{devlinBERTPretrainingDeep2019}
 
 \chapter{Conclusion}
 In our work,
@@ -221,6 +272,12 @@ The post-training bert can achieve better in the specific domain's sentiment ana
 
 \bibliographystyle{socreport}
 \bibliography{socreport}
+
+
+% \bibliographystyle{unsrt}
+% \addcontentsline{toc}{section}{References}
+% \bibliography{Ref}
+
 
 \appendix
 \chapter{Code}
