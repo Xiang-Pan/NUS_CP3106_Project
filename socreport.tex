@@ -9,6 +9,8 @@
 \usepackage{titlesec}
 \usepackage{enumitem}
 
+\usepackage{amsmath}
+
 \usepackage[colorlinks,linkcolor=black]{hyperref}
 
 
@@ -24,7 +26,8 @@
 \advisor{Prof. Lee Wee Sun}
 \deliverables{
 	\item Report: 1 Volume
-	\item Source Code: 1 DVD}
+	\item }
+	% \item Source Code: 1 DVD}
 \maketitle
 \begin{abstract}
 Sentiment Analysis 
@@ -53,60 +56,103 @@ In the report, we distinguish the differences between the general sentiment anal
 \listoftables
 \tableofcontents 
 
-\chapter{Introduction}
-The sentiment analysis is a specific task under the text classification.
-
-
-
-
-Many problems exist in computer science.  In this project, we 
-studied one particular important problem and propose a solution 
-for it.  
+\chapter{Introduction}  
+ 
 
 \section{Background}
-In this section, we briefly discuss the history and background
-of the targeted sentiment analysis problem.  A detail literature survey is presented in 
+In this section, we briefly discuss the history and background of the targeted sentiment analysis problem.  A detail literature survey is presented in 
 Chapter \ref{ch:related}.
 
-The sentiment analysis was proposed
-The problem we study in this report is an important one.
-This problem is first proposed in 1990 in the context
-of graph theory \cite{smith90graph}.  Zhang gives thec
-first algorithm to the problem and applied it to solve several 
-problems in artificial intelligence \cite{zhang91ai,zhang92ai}.  
-More recently, a slightly different formulation of the problem
-is studied independently \cite{kovsky92diff,ali94diff}.  None of this previous work
-uses the technique that we propose in this project.  Thus, we 
-believe that our algorithm is novel.
+The sentiment analysis was
+
 
 \section{The Problem}
-In this section, we formally defined the problem.  We adopt
-the definition given by Kovsky \cite{kovsky92diff}.
+In different papers, the problem have different name. The target sentence analysis is task with several subtask, such as target term extraction, target term sentiment classification. In this work, we focus on the target term sentiment classification.
 
-\section{Our Solution}
-\section{Report Organization}
+
+\cite{pei2019targeted} proposed a detailed classification for the target sentiment analysis: 
+We denote the $f_{cls}$ as the classification model.
+
+Target-grounded Aspect-based Sentiment Analysis (TG-ABSA):
+
+\begin{equation}
+    f_{cls}(sentence,aspect\ terms\ related\ to\ a\ aspect category) =sentiment
+\end{equation}
+
+Targeted Non-aspect-based Sentiment Analysis(TN-ABSA)
+
+\begin{equation}
+f_{cls}(sentence,target)=sentiment
+\end{equation}\label{TSA_definition}
+
+
+
+\begin{table*}
+    \centering
+    \caption{Categorization of the data}
+    \label{tab:autometrics}
+    {\small
+    \begin{tabular}{@{}l|p{0.72in}|c|c|c|c|p{0.8in}}
+    \toprule
+    Task & Dataset & Coherence  & Source & Collection & Target Structure & Example application domain\\
+    \hline
+    TG-ABSA & SemEval 2014 & Strong & Online Review & Crawling & Aspect (Entity) & Product, service, movie, Apps   \\
+    TN-ABSA & Twitter & Weak & Twitter & Filtering & Entity & Event, people, organization   \\
+    T-ABSA & Sentihood, Baby Care & Moderate & Forum& Crawling & (Entity, Aspect) & product, service   \\
+    \bottomrule
+    \end{tabular}
+    }
+    \end{table*}
+
+For a general TSA task, or more precisely, target entity sentiment classification(we use TSA to illustrate in the subsequent paper), we adopt the \ref{TSA_definition} definition as our task setting and treat the aspect entity as the target term, which is also a general setting.
+
+\section{Our Contributions}
+Our Contributions is mainly on three aspects:
+\begin{enumerate}
+    \item A general framework for target sentiment analysis
+    \item Auxiliary training methods for TSA
+    \item Proposing a new robustness test setting
+    \item Adversarial training methods for model's robustness for new(never appeared in training) targets.
+\end{enumerate}
+
 
 \chapter{Related Work}
 \label{ch:related}
-
-
 \section{Text classification}
+The text classification is a traditional application of NLP. As a typcial sequence data format, various sequence models have been applied to the text classification problem. 
 
 
+
+% \section{Pre-trained Language models}
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.7\linewidth]{./image/PLM.jpg}
+%     \caption{Pre-trained Language Models Family}
+%   \label{example}
+% \end{figure}
+
+In order to perform the downstream tasks of natural language processing, it is usually necessary to reexpress the original text to some features. From the early statistical language model to the model based on neural networks in recent years, it is to achieve this goal. Starting from word2vec, how to learn a reasonable word vector representation has become the key to different downstream tasks. The pre-training model is trained through reasonable structure design and large-scale corpus training, so as to obtain a more general word vector representation. Using these word vectors, many NLP downstream tasks can be performed. However, due to the different corpus domains and language domain differences, the task corpus needs to be used to fine-tune the model. At the same time, due to different downstream tasks, the use of word vectors is strictly related to  downstream models.
+
+BERT \cite{devlinBERTPretrainingDeep2019} as a typical and successful pre-trained model for various nlp tasks, can be seen as a baselines.  How to use the pre-trained language model to adapt to various downstream tasks and the efficient fine-tuning is focused by researchers.
 
 \section{Aspect Based Sentiment Analysis}
+We briefly review the related work in ABSA.
 
-\section{Pre-trained models}
+Using the Memory Network architecture \cite {Tang2016}, which uses a memory network to remember contextual words and explicitly model attention to target words and context.
+It was found that, compared with the previous model \cite {Tang2015} that used the left or right context alone, making full use of context words can improve its model.
 
+The Attention Encoder Network (AEN) \cite {ArxSong} was tested using GloVe word vectors as input word vector representations and BERT as word vectors representation word vector representations (AEN-BERT) (a modification of the transformer architecture). The author divides the Multi-Headed Attention (MHA) layer into MHA inner layer and MHA inner layer in order to model the target words and context differently, which is lighter than the transformer architecture.
 
+Graph Convolutional Neural Network (GCN) \cite {ArxZhaoa2019} achieves another recent performance improvement, using graph convolutional neural network to explicitly establish the dependence between emotional words in sentences with multiple aspects mold. They show that if there are multiple aspects in a sentence, the performance of their model's architecture will be particularly good.
 
+However, the designs of architecture in these works are various for utilizing various characteristics of targeted sentiment analysis. It is hard to unify to a generic format to combine those designs for further improvement. For a more generic framework, and better utilize the powerful pre-trained language models, we proposed our framework.
 
 
 
 
 \chapter{Problem and Algorithm}
 \section{Formal Description of Problem}
-Given a text sequence with n words text=$\{w_1,w_2,w_3,w_4,...,w_n\}$ and a target with m words, target text=  $\{t_1,t_2,t_m\}$ with its begin position $b$, the problem is to classify the sentiment polarity $polarity=\{positive,neutral,negative\}$ towards the given target in the context. We followed the SemEval 2014 Task 4\cite{pontiki-etal-2014-semeval}
+Given a text sequence with n words text=$\{w_1,w_2,w_3,w_4,...,w_n\}$ and a target with m words, target text=  $\{t_1,t_2,t_m\}$ with its begin position $b$, the problem is to classify the sentiment polarity $polarity=\{positive,neutral,negative\}$ towards the given target in the context. We followed the SemEval 2014 Task 4\cite{pontiki-etal-2014-semeval} subtask 2.
 
 
 
@@ -114,7 +160,7 @@ Given a text sequence with n words text=$\{w_1,w_2,w_3,w_4,...,w_n\}$ and a targ
 \section{Design of Algorithm}
 \section{A general framework for Targeted Sentiment Analysis(TSA)}
 
-\subsection{BERT for text classification}
+\paragraph{BERT for sentence text classification}
 
 
 As a powerful pre-trained universal language model, BERT can be used in various downstream tasks.
@@ -144,7 +190,7 @@ To enhance the performance, \cite{sun2019finetune} have several methods for text
 Those methods only consider the sentence-level classification. For TSA, the classification problem is more fine-grained, hence we will introduce our BERT-based framework for TSA.
 
 
-\subsubsection{BERT for TSA}
+\section{BERT for TSA}
 
 As described in the related work, BERT-SPC \cite{Song2019} repeat the target words at the end of context sentence. 
 
@@ -157,7 +203,9 @@ As described in the related work, BERT-SPC \cite{Song2019} repeat the target wor
 
 For original bert, the most direct way to utilize bert
 
-As show in the image \ref{Framework}, we add the begin token and end token around the target. In our initial experiments, we add the same token for different targets in the context sentence. However, 
+As show in the image \ref{Framework}, we add the begin token and end token around the target. 
+
+To test the token add methods, in our initial experiments, we add the same token for different targets in the context sentence. However, the results is worse than only taken for the target you need to do the classification. The reason may be that BERT model can not distinguish which token should aggregate the classification information.
 
 
 
@@ -165,24 +213,120 @@ As show in the image \ref{Framework}, we add the begin token and end token aroun
 
 \section{Auxiliary training methods for TSA}
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\linewidth]{./image/aux.png}
+    \caption{auxiliary training}
+  \label{Framework}
+\end{figure}
+
+
+To enhance bert by utilizing the targets' position information and the relationship between different targets in the same sentence, we use auxiliary training methods to better fine-tune BERT.
+
+we denote the auxiliary classification function by $f_{aux}$, the classification can be presented as:  
+
+\begin{equation}
+    f_{aux}(main\ target,other\ {target})=sentiment\ {pair}
+\end{equation}
+
+For a sentence with more than 2 targets, we iterate all the other targets in the sentence. Thus, the auxiliary loss can be denoted as:  
+\begin{equation}
+    loss_{aux}(main\ target)=\sum_{other\ {target_i} \in other\ {targets} }f_{aux}(main\ target,other\ {target_i})
+\end{equation}
+
+
+
+
 
 \section{Adversarial training methods for Robustness of TSA}
+\cite{karimi2020adversarial} use adversarial training methods from \cite{miyato2016adversarial} to enhance BERT-PT\cite{xu2019bert} model's performance. We utilize the similar methods in our framework.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\linewidth]{./image/target-depence.png}
+    \caption{Bottom layer of BERT visualization}
+  \label{target-depence}
+\end{figure}
+
+From the \ref{target-depence} we can see that our model is still have some dependence on the bottom layer of BERT. Such dependence may contribute to higher score in reappearing target sentiment analysis. However, when a target is never seen before, the dependence may decrease the robustness. We would like to make the framework to be less rely on the target tokens.
+
+\subsection{Robustness Test Settings}
+For simplicity, we remove these samples from the test set which own the same or similar targets in the train set.
+
+\begin{table}[]
+    \centering
+    \caption{
+		Statistics of re-split dataset.\\
+	}
+    \begin{tabular}{llll}
+    \hline
+    stat-type  & train         & test &     \\ \hline
+    twitter    & size          & 6248 & 619 \\ \hline
+               & target-number & 104  & 358 \\ \hline
+    restaurant & size          & 3608 & 393 \\ \hline
+               & target-number & 606  & 304 \\ \hline
+    laptop     & size          & 2328 & 282 \\ \hline
+               & target-number & 461  & 232 \\ \hline
+    \end{tabular}
+\end{table}
+
+\subsection{Adversarial training}
+The adversarial training method is searching the worst perturbations which can make the largest classification error. Towards the main optimization function, the adversarial training target is maximize the main loss function. For maximize the error rate, the following perturbations are added to the input embeddings to create new adversarial sentences in the embedding space. 
+
+\begin{equation}
+r_{adv} = -\epsilon \frac{g}{||g||_2}
+\end{equation} 
+
+\begin{equation}
+    g = \nabla_{x}\, \log\,  p(y|x;\hat{\theta})
+\end{equation} and $p_{adv}=\epsilon$ is the size of the perturbations.
+
+\begin{center}
+	$loss_{aux}=- \log p(y|x + r_{adv};\theta)$
+\end{center}
+
+For robustness test, 
+The total training loss is:  
+\begin{equation}
+    loss(main\ target)=loss_{main}(begin\_{token})+p_{aux}*loss_{aux}(main\ target)+loss_{adv}
+\end{equation}
 
 
-
-
-% \section{Proof of Correctness}
-% \section{Complexity Analysis}
+For the hyper parameters $p_{aux}$ and $p_{adv}$ is adjusted by the experiment results.
 
 \chapter{Evaluation}
-
+In this section, we describe the experiment environment, evaluation details and results of our experiments.
 
 \section{Implementation Details}
+
+We list our experiment environment: \\
+OS: Ubuntu 18.04 LTS (Bionic Beaver)\\
+Kernel: x86\_64 Linux 4.15.0-70-generic2\\
+Shell: zsh 5.4.2\\
+CPU: Intel Xeon W-2123 @ 8x 3.9GHz\\
+GPU: GeForce RTX 2080 Ti\\
+RAM: 31859MiB \\
+
+
+
+
 Our experiment is based on the code of \href{https://github.com/songyouwei/ABSA-PyTorch}{ABSA-Pytorch}. 
-We release our code in \href{https://github.com/Xiang-Pan/ABSA-PyTorch}{TSA-Pytorch}.
+
+We release our code in \href{https://github.com/Xiang-Pan/TSA-PyTorch}{TSA-Pytorch}.
+
+Our bert-model is based on the huggingface's transformers libraries. For some bottom-modified, we direct modified the source code of the library, details refer to our source code.
+
 \section{Experimental Setup}
 
+batch-size: 32\\
+optimizer: adam\\
+valset-ratio: 0.05\\
+max-seq-len: 128\\
+num-epoch: 10(The best performance model usually trained with 2 or 3 epochs for general bert, bert-multi-target(our framework) usually takes up to 10, adversarial training usually takes up to 10)\\
+
 \subsection{Targeted Sentiment Analysis}
+For our framework, the number of fine-tuning epochs is less than 10.
+
 
 \subsection{Domain Adaption' effect on Targeted Sentiment Analysis}
 
@@ -203,15 +347,23 @@ We release our code in \href{https://github.com/Xiang-Pan/ABSA-PyTorch}{TSA-Pyto
 \subsection{Pre-trained BERT Visualization}
 
 
-\subsection{Fine-tuned BERT Visualization}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\linewidth]{./image/L0H11.png}
+    \caption{Layer 0 Head 11 of original BERT}
+  \label{Framework}
+\end{figure}
 
+From the vi
 
-\subsection{Conclusion from Visualization}
-
+\subsection{BERT-SPC Visualization}
+We attached the full visualization of whole bert-spc model's attention. The bert's different attention is less modified on the fine-tune stage. When we add a additional transformer encoder layer above the bert model, the model training is getting much easier and a little performance increase.
 
 
 
 \section{Results}
+\subsection{TSA results}
+For the test results, we experiment on the original semeval dataset and twitter dataset. We use the reported results from TD-BERT \cite{8864964}
 
 
 \begin{table*}[tp]
@@ -223,52 +375,113 @@ We release our code in \href{https://github.com/Xiang-Pan/ABSA-PyTorch}{TSA-Pyto
 		Test results on three typical data sets.
 		% The baselines results are from the existed paper's reports. \\
 		% '-' means do not include included in the original paper or the test can not be done in this data set. 
-		% The highest score is marked with \textbf{bold}.
+		% The highest score is marked with \ {bold}.
 	}
       \begin{tabular}{cccccccc}
       \toprule
-      \multirow{2}{*}{ }&\multirow{2}{*}{\textbf{Models}}&
-      \multicolumn{2}{c}{\textbf{Twitter}}&\multicolumn{2}{c}{\textbf{Restaurant}}&\multicolumn{2}{c}{\textbf{Laptop}}\cr
+      \multirow{2}{*}{ }&\multirow{2}{*}{\ {Models}}&
+      \multicolumn{2}{c}{\ {Twitter}}&\multicolumn{2}{c}{\ {Restaurant}}&\multicolumn{2}{c}{\ {Laptop}}\cr
       \cmidrule(lr){3-4} \cmidrule(lr){5-6} \cmidrule(lr){7-8}
       &&Accuracy&Macro-F1&Accuracy&Macro-F1&Accuracy&Macro-F1\cr
       \midrule
-          \multirow{4}*{\textbf{RNN baselines}}
+          \multirow{4}*{\ {RNN baselines}}
           &TD-LSTM           &0.7080&0.6900              &0.7563&-                  &0.6813&-         \cr
           &ATAE-LSTM         &-&-                        &0.7720&-                  &0.6870&-         \cr
           &IAN               &-&-                        &0.7860&-                  &0.7210&-         \cr
-          &RAM               &0.6936&0.6730              &0.8023&0.7080             &\textbf{0.7449}&\textbf{0.7135}     \cr
+          &RAM               &0.6936&0.6730              &0.8023&0.7080             &\ {0.7449}&\ {0.7135}     \cr
       \midrule
-          \multirow{3}*{\textbf{Non-RNN baselines}}
+          \multirow{3}*{\ {Non-RNN baselines}}
           &Feature-based SVM &0.6340&0.6330              &0.8016&-                  &0.7049&-           \cr
           &Rec-NN            &0.6630&0.6590              &-&-                       &-&-              \cr
           &MemNet            &0.6850&0.6691              &0.7816&0.6583             &0.7033&0.6409    \cr
       \midrule
-          \multirow{4}*{\textbf{AEN-GloVe ablations}}
-          &AEN-GloVe w/o PCT       &0.7066&0.6907              &0.8017&0.7050             &0.7272&0.6750 \cr
-          &AEN-GloVe w/o MHA       &0.7124&0.6953              &0.7919&0.7028             &0.7178&0.6650 \cr
-          &AEN-GloVe w/o LSR       &0.7080&0.6920              &0.8000&0.7108             &0.7288&0.6869 \cr
-          &AEN-GloVe-BiLSTM        &0.7210&\textbf{0.7042}     &0.7973&0.7037             &0.7312&0.6980 \cr
-      \midrule
-          \multirow{3}*{\textbf{Ours}}
-          &AEN-GloVe  &\textbf{0.7283}&0.6981  &\textbf{0.8098}&\textbf{0.7214}  &0.7351&0.6904 \cr
-          &BERT-SPC  &\textbf{0.7355}&\textbf{0.7214} &\textbf{0.8446}&\textbf{0.7698} &\textbf{0.7899}&\textbf{0.7503} \cr
-          &AEN-BERT &\textbf{0.7471}&\textbf{0.7313} &\textbf{0.8312}&\textbf{0.7376} &\textbf{0.7993}&\textbf{0.7631} \cr
+          \multirow{3}*{\ {AEN-BERT}}
+        %   &AEN-GloVe  &\ {0.7283}&0.6981  &\ {0.8098}&\ {0.7214}  &0.7351&0.6904 \cr
+            &BERT &-&- & 75.29 & 71.91 & 81.54 & 71.94\\
+            &BERT-SPC  &\ {0.7355}&\ {0.7214} &\ {0.8446}&\ {0.7698} &\ {0.7899}&\ {0.7503} \cr
+          &AEN-BERT &\ {0.7471}&\ {0.7313} &\ {0.8312}&\ {0.7376} &\ {0.7993}&\ {0.7631} \cr
+    \midrule
+        \multirow{1}*{\ {BERT-PT}}
+        &BERT-PT  &-&-  &\ {0.8495}&\ {76.96}  &0.7807&0.7508 \cr
+    \midrule
+        \multirow{1}*{\ {Our}}
+        &Framework  &0.7673&0.7451  &\ {0.8536}&\ {0.778}  &0.8009&0.7673 \cr
+
       \bottomrule
-      \end{tabular}fr
+      \end{tabular}
       \label{tab:result}
       \end{threeparttable}}
   \end{table*}
 
-%  asdfsdaf \cite{devlinBERTPretrainingDeep2019}
+
+
+
+\subsection{Robustness Test results}
+
+\paragraph{New re-split dataset}
+
+
+
+
+
+
+\begin{table*}[tp]
+    \small
+    \centering
+    \resizebox{\textwidth}{!}{
+    \begin{threeparttable}
+    \caption{
+		Test results on three re-split data sets.
+		% The baselines results are from the existed paper's reports. \\
+		% '-' means do not include included in the original paper or the test can not be done in this data set. 
+		% The highest score is marked with \ {bold}.
+	}
+      \begin{tabular}{cccccccc}
+      \toprule
+      \multirow{2}{*}{ }&\multirow{2}{*}{\ {Models}}&
+      \multicolumn{2}{c}{\ {Twitter}}&\multicolumn{2}{c}{\ {Restaurant}}&\multicolumn{2}{c}{\ {Laptop}}\cr
+      \cmidrule(lr){3-4} \cmidrule(lr){5-6} \cmidrule(lr){7-8}
+      &&Accuracy&Macro-F1&Accuracy&Macro-F1&Accuracy&Macro-F1\cr
+      
+      
+
+      \midrule
+          \multirow{3}*{\ {AEN-BERT}}
+          &BERT-SPC  &\ {0.7355}&\ {0.7214} &\ {0.8446}&\ {0.7698} &\ {0.7899}&\ {0.7503} \cr
+          &AEN-BERT &\ {0.7471}&\ {0.7313} &\ {0.8312}&\ {0.7376} &\ {0.7993}&\ {0.7631} \cr
+    \midrule
+        \multirow{1}*{\ {BERT-PT}}
+        &BERT-PT  &-&-  &\ {0.8495}&\ {76.96}  &0.7807&0.7508 \cr
+        
+        &TD-BERT  &-&-  &\ {0.8495}&\ {76.96}  &0.7807&0.7508 \cr
+    \midrule
+        \multirow{1}*{\ {Our}}
+        &Framework  &0.7673&0.7451  &\ {0.8536}&\ {0.778}  &0.7915&0.76 \cr
+
+      \bottomrule
+      \end{tabular}
+      \label{tab:result}
+      \end{threeparttable}}
+  \end{table*}
+
+
 
 \chapter{Conclusion}
-In our work,
-\section{Contributions}
+In our work, we analyze the characteristics of the targeted sentiment analysis problem. Then we proposed a generic framework for TSA. Based on the framework, we introduce the auxiliary training methods to better fine-tune BERT. To test the robustness of our framework, we construct a new robustness data set based on the original data set. We compare our method in the robustness data set. To enhance the model's robustness towards unseen or few-seen targets, we utilize the adversarial training to make the model less rely on the target tokens(words) but instead to make more use of the context information.
+
+
+
+
 \section{Future Work}
 \subsection{Domain adaptation for BERT(Post-training BERT)}
-The post-training bert can achieve better in the specific domain's sentiment analysis. In p
+The post-training bert can achieve better performance in the specific domain's sentiment analysis. In previous research, many people tried to use the within-domain corpus to do the post-training of bert. And utilize the
+But how to do the post-training is an interesting question. For a general answer, we can follow the within-domain post-training methods in text classification. But it is obviously not a good idea for a specific fine-grained problem. In other area, some people utilize corpus based knowledge graphs to construct special features self-supervised training methods. Similar idea can be applied in TSA problem.
 
-\subsection{Self-Supervised BERT training methods}
+
+\subsection{Data Argumentation}
+Another way of solving the problem of lack of labeled training data is to use the data Argumentation. According to previous research, the transfer learning usually done cross closely related area such as reviews on laptop and restaurant. However, the data set size is still limited. To make the model more widely applicable and enhance the model's performance, we can consider some data argumentation methods. Actually, the adversarial learning is a general transformations for Data Augmentation. There are other data argumentation methods to be further considered.
+
+
 
 \bibliographystyle{socreport}
 \bibliography{socreport}
@@ -280,10 +493,32 @@ The post-training bert can achieve better in the specific domain's sentiment ana
 
 
 \appendix
-\chapter{Code}
+\chapter{Visualization Results}
 
-\chapter{Proofs}
-In this appendix, we present alternate, longer, but more interesting proof 
-of correctness of our algorithm.  This proof is based on induction and proof
-by contradiction.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\linewidth]{./image/bert_all.png}
+    \caption{BERT ALL Layers\\
+    (From top to bottom, is layer 0 to layer 11. From left to right, is the head 0 to head 8)}
+  \label{bert_all}
+\end{figure}
+
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\linewidth]{./image/spc_all.png}
+    \caption{BERT-SPC ALL Layers\\
+    (From top to bottom, is layer 0 to layer 11. From left to right, is the head 0 to head 8)}
+  \label{spc_all}
+\end{figure}
+
+
+From the pictures, we can find that the bert\_spc model's attention is densely connected to the [SEP] token and [CLS] token. The similar structure can be found in our framework, the begin token gives additional positional information. And we can enhance the model training by using aggregate classification token embeddings.
+
+
+
+\chapter{Code}
+Our code is available on \href{https://github.com/Xiang-Pan/TSA-PyTorch}{TSA-Pytorch}.
+
 \end{document}
