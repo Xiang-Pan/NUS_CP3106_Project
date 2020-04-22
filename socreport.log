@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2020.3.9)  17 APR 2020 21:17
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2020.3.9)  20 APR 2020 03:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -321,12 +321,12 @@ File: se-ascii-print.def 2019/11/29 v1.12 stringenc: Printable ASCII characters
 ) [1
 
 ] [1] [2] [3] (./socreport.lof
-Overfull \hbox (0.36133pt too wide) detected at line 11
+Overfull \hbox (0.36133pt too wide) detected at line 12
  []\TU/lmr/m/n/10.95 A-2
  []
 
 
-Overfull \hbox (0.36133pt too wide) detected at line 12
+Overfull \hbox (0.36133pt too wide) detected at line 13
  []\TU/lmr/m/n/10.95 A-3
  []
 
@@ -353,119 +353,117 @@ Overfull \hbox (0.36133pt too wide) detected at line 12
  [7]
 Chapter 1.
 
-LaTeX Warning: Citation `pei2019targeted' on page 1 undefined on input line 73.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 99--99
-[]\TU/lmr/m/n/10 SemEval
- []
-
-
-Underfull \hbox (badness 2951) in paragraph at lines 99--100
-\TU/lmr/m/n/10 vice, movie,
- []
-
-
-Underfull \hbox (badness 5008) in paragraph at lines 100--101
-[]\TU/lmr/m/n/10 Event, peo-
- []
-
-
-Underfull \hbox (badness 6412) in paragraph at lines 100--101
-\TU/lmr/m/n/10 ple, organi-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 101--101
-[]\TU/lmr/m/n/10 Sentihood,
- []
-
-
-Overfull \hbox (6.7329pt too wide) in paragraph at lines 95--105
- [][] 
- []
+LaTeX Warning: Citation `pei2019targeted' on page 1 undefined on input line 72.
 
 [1
 
 
-] [2]
-Chapter 2.
-
-LaTeX Warning: Citation `devlinBERTPretrainingDeep2019' on page 3 undefined on input line 136.
-
-[3
-
 ]
-
-LaTeX Warning: Citation `Tang2016' on page 4 undefined on input line 141.
-
-
-LaTeX Warning: Citation `Tang2015' on page 4 undefined on input line 142.
-
-
-LaTeX Warning: Citation `ArxSong' on page 4 undefined on input line 144.
-
-
-LaTeX Warning: Citation `ArxZhaoa2019' on page 4 undefined on input line 146.
-
-[4]
-Chapter 3.
-
-LaTeX Warning: Citation `pontiki-etal-2014-semeval' on page 5 undefined on input line 155.
-
-
-Overfull \hbox (0.15497pt too wide) in paragraph at lines 161--161
-|[]\TU/lmr/bx/n/14.4 A general framework for Targeted Sentiment Analysis(TSA)| 
+Underfull \hbox (badness 10000) in paragraph at lines 98--98
+[]\TU/lmr/m/n/10 SemEval
  []
 
 
-LaTeX Warning: Citation `sun2019finetune' on page 5 undefined on input line 173.
+Underfull \hbox (badness 2951) in paragraph at lines 98--99
+\TU/lmr/m/n/10 vice, movie,
+ []
 
-[5
+
+Underfull \hbox (badness 5008) in paragraph at lines 99--100
+[]\TU/lmr/m/n/10 Event, peo-
+ []
+
+
+Underfull \hbox (badness 6412) in paragraph at lines 99--100
+\TU/lmr/m/n/10 ple, organi-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--100
+[]\TU/lmr/m/n/10 Sentihood,
+ []
+
+
+Overfull \hbox (6.7329pt too wide) in paragraph at lines 94--104
+ [][] 
+ []
+
+[2] [3]
+Chapter 2.
+File: ./image/PLM.jpg Graphic file (type bmp)
+<./image/PLM.jpg>
+[4
 
 ]
 
-LaTeX Warning: Citation `Song2019' on page 6 undefined on input line 195.
+LaTeX Warning: Citation `devlinBERTPretrainingDeep2019' on page 5 undefined on input line 135.
+
+
+LaTeX Warning: Citation `Tang2016' on page 5 undefined on input line 140.
+
+
+LaTeX Warning: Citation `Tang2015' on page 5 undefined on input line 141.
+
+
+LaTeX Warning: Citation `ArxSong' on page 5 undefined on input line 143.
+
+
+LaTeX Warning: Citation `ArxZhaoa2019' on page 5 undefined on input line 145.
+
+[5] [6]
+Chapter 3.
+
+LaTeX Warning: Citation `pontiki-etal-2014-semeval' on page 7 undefined on input line 154.
+
+
+LaTeX Warning: Citation `sun2019finetune' on page 7 undefined on input line 172.
+
+[7
+
+]
+
+LaTeX Warning: Citation `Song2019' on page 8 undefined on input line 194.
 
 File: ./image/Framework.png Graphic file (type bmp)
 <./image/Framework.png>
+
+LaTeX Warning: Citation `soares2019matching' on page 8 undefined on input line 205.
+
 File: ./image/aux.png Graphic file (type bmp)
 <./image/aux.png>
+[8]
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[6]
-
-LaTeX Warning: Citation `karimi2020adversarial' on page 7 undefined on input line 242.
+LaTeX Warning: Citation `karimi2020adversarial' on page 9 undefined on input line 241.
 
 
-LaTeX Warning: Citation `miyato2016adversarial' on page 7 undefined on input line 242.
+LaTeX Warning: Citation `miyato2016adversarial' on page 9 undefined on input line 241.
 
 
-LaTeX Warning: Citation `xu2019bert' on page 7 undefined on input line 242.
+LaTeX Warning: Citation `xu2019bert' on page 9 undefined on input line 241.
 
 File: ./image/target-depence.png Graphic file (type bmp)
 <./image/target-depence.png>
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+[9]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 256.
+               Default added (so using `tbp') on input line 255.
 
-[7] [8] [9]
+[10] [11] [12]
 Chapter 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 302--309
+Underfull \hbox (badness 10000) in paragraph at lines 301--308
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 321--326
+Underfull \hbox (badness 10000) in paragraph at lines 318--323
 
  []
 
-[10
+[13
 
 ]
 File: ./image/L0H11.png Graphic file (type bmp)
@@ -475,15 +473,35 @@ File: ./image/L0H11.png Graphic file (type bmp)
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Citation `8864964' on page 11 undefined on input line 366.
+LaTeX Warning: Citation `pontiki-etal-2014-semeval' on page 14 undefined on input line 363.
 
-[11] [12] [13] [14]
+
+LaTeX Warning: Citation `mitchell2013open' on page 14 undefined on input line 363.
+
+
+LaTeX Warning: Citation `8864964' on page 14 undefined on input line 363.
+
+[14]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Citation `alex2019adapt' on page 15 undefined on input line 422.
+
+[15]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[16] [17]
 Chapter 5.
-[15
+[18
 
 ]
 No file socreport.bbl.
-[16]
+[19]
 Appendix A.
 File: ./image/bert_all.png Graphic file (type bmp)
 <./image/bert_all.png>
@@ -499,29 +517,29 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 ] [2] [3]
 Appendix B.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 524.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 565.
 [1
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 524.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 565.
  (./socreport.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 524.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 524.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 565.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 565.
 Package rerunfilecheck Info: File `socreport.out' has not changed.
-(rerunfilecheck)             Checksum: 050A07A718DC8AB5C8A44CB844B56A80;2810.
+(rerunfilecheck)             Checksum: EAA54DB5C01EFE43C8573AA52CB41FF1;2689.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 524.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 565.
  ) 
 Here is how much of TeX's memory you used:
- 9897 strings out of 479805
- 143050 string characters out of 5893181
- 416941 words of memory out of 5000000
- 26888 multiletter control sequences out of 15000+600000
- 536669 words of font info for 52 fonts, out of 8000000 for 9000
+ 9907 strings out of 479805
+ 143204 string characters out of 5893181
+ 424956 words of memory out of 5000000
+ 26895 multiletter control sequences out of 15000+600000
+ 536677 words of font info for 53 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 34i,13n,48p,1024b,541s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,13n,48p,1032b,523s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on socreport.pdf (28 pages).
+Output written on socreport.pdf (31 pages).
