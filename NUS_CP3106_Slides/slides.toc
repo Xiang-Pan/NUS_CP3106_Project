@@ -1,0 +1,22 @@
+\beamer@sectionintoc {1}{Abstract}{3}{0}{1}
+\beamer@sectionintoc {2}{Background}{4}{0}{2}
+\beamer@subsectionintoc {2}{1}{Sentiment Analysis}{4}{0}{2}
+\beamer@subsectionintoc {2}{2}{Different Tasks of Sentiment Analysis}{5}{0}{2}
+\beamer@subsectionintoc {2}{3}{Aspect Based Sentiment Analysis}{6}{0}{2}
+\beamer@subsectionintoc {2}{4}{Targeted Sentiment Analysis}{7}{0}{2}
+\beamer@sectionintoc {3}{Related Work}{9}{0}{3}
+\beamer@subsectionintoc {3}{1}{Pre-trained Language Models}{9}{0}{3}
+\beamer@subsectionintoc {3}{2}{Text Classification}{10}{0}{3}
+\beamer@subsectionintoc {3}{3}{Targeted Based Sentiment Analysis}{12}{0}{3}
+\beamer@subsectionintoc {3}{4}{Previous Work Problems}{13}{0}{3}
+\beamer@sectionintoc {4}{Robust Framework}{14}{0}{4}
+\beamer@subsectionintoc {4}{1}{Framework}{14}{0}{4}
+\beamer@subsectionintoc {4}{2}{Auxiliary Training}{15}{0}{4}
+\beamer@subsectionintoc {4}{3}{Robust Test}{16}{0}{4}
+\beamer@subsectionintoc {4}{4}{Adversarial Training}{18}{0}{4}
+\beamer@subsectionintoc {4}{5}{Data Augmentation}{19}{0}{4}
+\beamer@sectionintoc {5}{Experiment}{20}{0}{5}
+\beamer@subsectionintoc {5}{1}{TSA Results}{20}{0}{5}
+\beamer@subsectionintoc {5}{2}{Domain Adaption Results}{21}{0}{5}
+\beamer@subsectionintoc {5}{3}{Robust Test Results}{22}{0}{5}
+\beamer@sectionintoc {6}{Conclusion And Future Work}{25}{0}{6}

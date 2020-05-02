@@ -1,0 +1,151 @@
+\begin{thebibliography}{10}
+
+\bibitem{pontiki-etal-2014-semeval}
+Maria Pontiki, Dimitris Galanis, John Pavlopoulos, Harris Papageorgiou, Ion
+  Androutsopoulos, and Suresh Manandhar.
+\newblock {S}em{E}val-2014 task 4: Aspect based sentiment analysis.
+\newblock In {\em Proceedings of the 8th International Workshop on Semantic
+  Evaluation ({S}em{E}val 2014)}, pages 27--35, Dublin, Ireland, August 2014.
+  Association for Computational Linguistics.
+
+\bibitem{sun2019finetune}
+Chi Sun, Xipeng Qiu, Yige Xu, and Xuanjing Huang.
+\newblock How to fine-tune bert for text classification?, 2019.
+
+\bibitem{devlinBERTPretrainingDeep2019}
+Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova.
+\newblock {{BERT}}: {{Pre}}-training of {{Deep Bidirectional Transformers}} for
+  {{Language Understanding}}.
+\newblock {\em arXiv:1810.04805 [cs]}, May 2019.
+
+\bibitem{zhang-etal-2019-ernie}
+Zhengyan Zhang, Xu~Han, Zhiyuan Liu, Xin Jiang, Maosong Sun, and Qun Liu.
+\newblock {ERNIE}: Enhanced language representation with informative entities.
+\newblock In {\em Proceedings of the 57th Annual Meeting of the Association for
+  Computational Linguistics}, pages 1441--1451, Florence, Italy, July 2019.
+  Association for Computational Linguistics.
+
+\bibitem{jiSurveyKnowledgeGraphs2020a}
+Shaoxiong Ji, Shirui Pan, Erik Cambria, Pekka Marttinen, and Philip~S. Yu.
+\newblock A {{Survey}} on {{Knowledge Graphs}}: {{Representation}},
+  {{Acquisition}} and {{Applications}}.
+\newblock {\em arXiv:2002.00388 [cs]}, February 2020.
+
+\bibitem{cambria2018senticnet}
+Erik Cambria, Soujanya Poria, Devamanyu Hazarika, and Kenneth Kwok.
+\newblock {SenticNet} 5: Discovering conceptual primitives for sentiment
+  analysis by means of context embeddings.
+\newblock In {\em AAAI}, pages 1795--1802, 2018.
+
+\bibitem{ma2018targeted}
+Yukun Ma, Haiyun Peng, and Erik Cambria.
+\newblock Targeted aspect-based sentiment analysis via embedding commonsense
+  knowledge into an attentive lstm.
+\newblock In {\em AAAI}, pages 5876--5883, 2018.
+
+\bibitem{Tang2016}
+Duyu Tang, Bing Qin, and Ting Liu.
+\newblock {Aspect Level Sentiment Classification with Deep Memory Network}.
+\newblock In {\em Proceedings of the 2016 Conference on Empirical Methods in
+  Natural Language Processing}, pages 214--224, 2016.
+
+\bibitem{Tang2015}
+Duyu Tang, Bing Qin, Xiaocheng Feng, and Ting Liu.
+\newblock {Effective LSTMs for target-dependent sentiment classification}.
+\newblock In {\em COLING 2016 - 26th International Conference on Computational
+  Linguistics, Proceedings of COLING 2016: Technical Papers}, pages 3298--3307,
+  2016.
+
+\bibitem{ArxSong}
+Youwei Song, Jiahai Wang, Tao Jiang, Zhiyue Liu, and Yanghui Rao.
+\newblock Attentional encoder network for targeted sentiment classification.
+\newblock {\em arXiv preprint arXiv:1902.09314}, 2019.
+
+\bibitem{ArxZhaoa2019}
+Pinlong Zhaoa, Linlin Houb, and Ou~Wua.
+\newblock Modeling sentiment dependencies with graph convolutional networks for
+  aspect-level sentiment classification.
+\newblock {\em arXiv preprint arXiv:1906.04501}, 2019.
+
+\bibitem{Li}
+Zheng Li, Ying Wei, Yu~Zhang, Xiang Zhang, Xin Li, and Qiang Yang.
+\newblock {Exploiting Coarse-to-Fine Task Transfer for Aspect-level Sentiment
+  Classification}.
+\newblock In {\em Proceedings of the AAAI Conference on Artificial
+  Intelligence}, pages 4253----4260, 2019.
+
+\bibitem{He}
+Ruidan He, Wee~Sun Lee, Hwee~Tou Ng, and Daniel Dahlmeier.
+\newblock {Exploiting document knowledge for aspect-level sentiment
+  classification}.
+\newblock In {\em ACL 2018 - 56th Annual Meeting of the Association for
+  Computational Linguistics, Proceedings of the Conference (Long Papers)},
+  volume~2, pages 579--585, 2018.
+
+\bibitem{He2016}
+Ruining He and Julian McAuley.
+\newblock {Ups and Downs}.
+\newblock In {\em Proceedings of the 25th International Conference on World
+  Wide Web - WWW '16}, pages 507--517, New York, New York, USA, 2016. ACM
+  Press.
+
+\bibitem{Hochreiter1997}
+Sepp Hochreiter and J{\"u}rgen Schmidhuber.
+\newblock Long short-term memory.
+\newblock {\em Neural computation}, 9(8):1735--1780, 1997.
+
+\bibitem{Xu2019}
+Hu~Xu, Bing Liu, Lei Shu, and Philip~S Yu.
+\newblock {BERT Post-Training for Review Reading Comprehension and Aspect-based
+  Sentiment Analysis}.
+\newblock In {\em Proceedings of the 2019 Conference of the North American
+  Chapter of the Association for Computational Linguistics: Human Language
+  Technologies, Volume 1 (Long and Short Papers)}, pages 2324--2335.
+  Association for Computational Linguistics, 2019.
+
+\bibitem{Song2019}
+Youwei Song, Jiahai Wang, Tao Jiang, Zhiyue Liu, and Yanghui Rao.
+\newblock Targeted sentiment classification with attentional encoder network.
+\newblock {\em Lecture Notes in Computer Science}, page 93–103, 2019.
+
+\bibitem{pei2019targeted}
+Jiaxin Pei, Aixin Sun, and Chenliang Li.
+\newblock Targeted sentiment analysis: A data-driven categorization, 2019.
+
+\bibitem{karimi2020adversarial}
+Akbar Karimi, Leonardo Rossi, Andrea Prati, and Katharina Full.
+\newblock Adversarial training for aspect-based sentiment analysis with bert,
+  2020.
+
+\bibitem{miyato2016adversarial}
+Takeru Miyato, Andrew~M. Dai, and Ian Goodfellow.
+\newblock Adversarial training methods for semi-supervised text classification,
+  2016.
+
+\bibitem{xu2019bert}
+Hu~Xu, Bing Liu, Lei Shu, and Philip~S. Yu.
+\newblock Bert post-training for review reading comprehension and aspect-based
+  sentiment analysis, 2019.
+
+\bibitem{8864964}
+Z.~{Gao}, A.~{Feng}, X.~{Song}, and X.~{Wu}.
+\newblock Target-dependent sentiment classification with bert.
+\newblock {\em IEEE Access}, 7:154290--154299, 2019.
+
+\bibitem{mitchell2013open}
+Margaret Mitchell, Jacqui Aguilar, Theresa Wilson, and Benjamin Van~Durme.
+\newblock Open domain targeted sentiment.
+\newblock In {\em Proceedings of the 2013 Conference on Empirical Methods in
+  Natural Language Processing}, pages 1643--1654, 2013.
+
+\bibitem{soares2019matching}
+Livio~Baldini Soares, Nicholas FitzGerald, Jeffrey Ling, and Tom Kwiatkowski.
+\newblock Matching the blanks: Distributional similarity for relation learning,
+  2019.
+
+\bibitem{alex2019adapt}
+Alexander Rietzler, Sebastian Stabinger, Paul Opitz, and Stefan Engl.
+\newblock Adapt or get left behind: Domain adaptation through bert language
+  model finetuning for aspect-target sentiment classification, 2019.
+
+\end{thebibliography}
