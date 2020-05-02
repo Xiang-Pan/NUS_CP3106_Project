@@ -1,0 +1,99 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\citename{Devlin}{Chang,
+  Lee}{Toutanova}{DevlinETAL}{2019}{devlinBERTPretrainingDeep2019}]{devlinBERTPretrainingDeep2019}
+Devlin, J., Chang, M.-W., Lee, K., \& Toutanova, K. (2019).
+\newblock {{BERT}}: {{Pre}}-training of {{Deep Bidirectional Transformers}} for
+  {{Language Understanding}}.
+\newblock {\em arXiv:1810.04805 [cs]}, , May, 2019.
+
+\bibitem[\protect\citename{{Gao}}{{Feng},
+  {Song}}{{Wu}}{{Gao}ETAL}{2019}{8864964}]{8864964}
+{Gao}, Z., {Feng}, A., {Song}, X., \& {Wu}, X. (2019).
+\newblock Target-dependent sentiment classification with bert.
+\newblock {\em IEEE Access}, {\em 7\/}, 2019, 154290--154299.
+
+\bibitem[\protect\citename{Karimi}{Rossi,
+  Prati}{Full}{KarimiETAL}{2020}{karimi2020adversarial}]{karimi2020adversarial}
+Karimi, A., Rossi, L., Prati, A., \& Full, K. (2020).
+\newblock Adversarial training for aspect-based sentiment analysis with bert.
+
+\bibitem[\protect\citename{Mitchell}{Aguilar,
+  Wilson}{Van~Durme}{MitchellETAL}{2013}{mitchell2013open}]{mitchell2013open}
+Mitchell, M., Aguilar, J., Wilson, T., \& Van~Durme, B. (2013).
+\newblock Open domain targeted sentiment.
+\newblock {\em Proceedings of the 2013 Conference on Empirical Methods in
+  Natural Language Processing} (pp.\ 1643--1654), 2013.
+
+\bibitem[\protect\citename{Miyato}{Dai}{Goodfellow}{MiyatoETAL}{2016}{miyato2016adversarial}]{miyato2016adversarial}
+Miyato, T., Dai, A.~M., \& Goodfellow, I. (2016).
+\newblock Adversarial training methods for semi-supervised text classification.
+
+\bibitem[\protect\citename{Pei}{Sun}{Li}{PeiETAL}{2019}{pei2019targeted}]{pei2019targeted}
+Pei, J., Sun, A., \& Li, C. (2019).
+\newblock Targeted sentiment analysis: A data-driven categorization.
+
+\bibitem[\protect\citename{Pontiki}{Galanis, Pavlopoulos, Papageorgiou,
+  Androutsopoulos}{Manandhar}{PontikiETAL}{2014}{pontiki-etal-2014-semeval}]{pontiki-etal-2014-semeval}
+Pontiki, M., Galanis, D., Pavlopoulos, J., Papageorgiou, H., Androutsopoulos,
+  I., \& Manandhar, S. (2014).
+\newblock {S}em{E}val-2014 task 4: Aspect based sentiment analysis.
+\newblock {\em Proceedings of the 8th International Workshop on Semantic
+  Evaluation ({S}em{E}val 2014)} (pp.\ 27--35), Dublin, Ireland, August, 2014:
+  Association for Computational Linguistics.
+
+\bibitem[\protect\citename{Rietzler}{Stabinger,
+  Opitz}{Engl}{RietzlerETAL}{2019}{alex2019adapt}]{alex2019adapt}
+Rietzler, A., Stabinger, S., Opitz, P., \& Engl, S. (2019).
+\newblock Adapt or get left behind: Domain adaptation through bert language
+  model finetuning for aspect-target sentiment classification.
+
+\bibitem[\protect\citename{Soares}{FitzGerald,
+  Ling}{Kwiatkowski}{SoaresETAL}{2019}{soares2019matching}]{soares2019matching}
+Soares, L.~B., FitzGerald, N., Ling, J., \& Kwiatkowski, T. (2019).
+\newblock Matching the blanks: Distributional similarity for relation learning.
+
+\bibitem[\protect\citename{Song}{Wang, Jiang,
+  Liu}{Rao}{SongETAL}{2019a}{ArxSong}]{ArxSong}
+Song, Y., Wang, J., Jiang, T., Liu, Z., \& Rao, Y. (2019a).
+\newblock Attentional encoder network for targeted sentiment classification.
+\newblock {\em arXiv preprint arXiv:1902.09314}, , 2019.
+
+\bibitem[\protect\citename{Song}{Wang, Jiang,
+  Liu}{Rao}{SongETAL}{2019b}{Song2019}]{Song2019}
+Song, Y., Wang, J., Jiang, T., Liu, Z., \& Rao, Y. (2019b).
+\newblock Targeted sentiment classification with attentional encoder network.
+\newblock {\em Lecture Notes in Computer Science}, , 2019, 93–103.
+
+\bibitem[\protect\citename{Sun}{Qiu,
+  Xu}{Huang}{SunETAL}{2019}{sun2019finetune}]{sun2019finetune}
+Sun, C., Qiu, X., Xu, Y., \& Huang, X. (2019).
+\newblock How to fine-tune bert for text classification?
+
+\bibitem[\protect\citename{Tang}{Qin,
+  Feng}{Liu}{TangETAL}{2016a}{Tang2015}]{Tang2015}
+Tang, D., Qin, B., Feng, X., \& Liu, T. (2016a).
+\newblock {Effective LSTMs for target-dependent sentiment classification}.
+\newblock {\em COLING 2016 - 26th International Conference on Computational
+  Linguistics, Proceedings of COLING 2016: Technical Papers} (pp.\ 3298--3307),
+  2016.
+
+\bibitem[\protect\citename{Tang}{Qin}{Liu}{TangETAL}{2016b}{Tang2016}]{Tang2016}
+Tang, D., Qin, B., \& Liu, T. (2016b).
+\newblock {Aspect Level Sentiment Classification with Deep Memory Network}.
+\newblock {\em Proceedings of the 2016 Conference on Empirical Methods in
+  Natural Language Processing} (pp.\ 214--224), 2016.
+
+\bibitem[\protect\citename{Xu}{Liu,
+  Shu}{Yu}{XuETAL}{2019}{xu2019bert}]{xu2019bert}
+Xu, H., Liu, B., Shu, L., \& Yu, P.~S. (2019).
+\newblock Bert post-training for review reading comprehension and aspect-based
+  sentiment analysis.
+
+\bibitem[\protect\citename{Zhaoa}{Houb}{Wua}{ZhaoaETAL}{2019}{ArxZhaoa2019}]{ArxZhaoa2019}
+Zhaoa, P., Houb, L., \& Wua, O. (2019).
+\newblock Modeling sentiment dependencies with graph convolutional networks for
+  aspect-level sentiment classification.
+\newblock {\em arXiv preprint arXiv:1906.04501}, , 2019.
+
+\end{thebibliography}

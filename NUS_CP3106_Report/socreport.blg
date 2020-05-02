@@ -1,0 +1,64 @@
+This is BibTeX, Version 0.99d (TeX Live 2019)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: socreport.aux
+The style file: socreport.bst
+Database file #1: socreport.bib
+`month' is a missing field, not a string, for entry 8864964
+while executing---line 1367 of file socreport.bst
+Warning--empty address in mitchell2013open
+`month' is a missing field, not a string, for entry mitchell2013open
+while executing---line 1367 of file socreport.bst
+`month' is a missing field, not a string, for entry ArxSong
+while executing---line 1367 of file socreport.bst
+`month' is a missing field, not a string, for entry Song2019
+while executing---line 1367 of file socreport.bst
+Warning--empty address in Tang2015
+`month' is a missing field, not a string, for entry Tang2015
+while executing---line 1367 of file socreport.bst
+Warning--empty address in Tang2016
+`month' is a missing field, not a string, for entry Tang2016
+while executing---line 1367 of file socreport.bst
+`month' is a missing field, not a string, for entry ArxZhaoa2019
+while executing---line 1367 of file socreport.bst
+You've used 16 entries,
+            2653 wiz_defined-function locations,
+            640 strings with 7403 characters,
+and the built_in function-call counts, 8499 in all, are:
+= -- 784
+> -- 544
+< -- 4
++ -- 226
+- -- 224
+* -- 736
+:= -- 1581
+add.period$ -- 41
+call.type$ -- 16
+change.case$ -- 144
+chr.to.int$ -- 14
+cite$ -- 35
+duplicate$ -- 243
+empty$ -- 456
+format.name$ -- 208
+if$ -- 1580
+int.to.chr$ -- 3
+int.to.str$ -- 0
+missing$ -- 9
+newline$ -- 76
+num.names$ -- 112
+pop$ -- 165
+preamble$ -- 1
+purify$ -- 144
+quote$ -- 0
+skip$ -- 258
+stack$ -- 0
+substring$ -- 375
+swap$ -- 48
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 144
+warning$ -- 3
+while$ -- 78
+width$ -- 0
+write$ -- 243
+(There were 7 error messages)
