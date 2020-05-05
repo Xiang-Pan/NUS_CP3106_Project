@@ -282,8 +282,7 @@ r_{adv} = -\epsilon \frac{g}{||g||_2}
 	$loss_{aux}=- \log p(y|x + r_{adv};\theta)$
 \end{center}
 
-For robustness test, 
-The total training loss is:  
+For robustness test, the total training loss is:  
 \begin{equation}
     loss(main\ target)=loss_{main}(begin\_{token})+p_{aux}*loss_{aux}(main\ target)+loss_{adv}
 \end{equation}
